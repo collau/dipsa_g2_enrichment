@@ -1,0 +1,54 @@
+<h1>Angular</h1>
+
+<form #itemForm="ngForm" (ngSubmit)="processItem()">
+
+  <h3>Valid = {{ itemForm.valid }}</h3>
+  <h3>Invalid = {{ itemForm.invalid }}</h3>
+
+  <table>
+
+    <tr>
+      <td>Item:</td>
+      <td>
+        <input type="text" name="name" size="30" placeholder="Please type in an item" required ngModel>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Quantity:</td>
+      <td>
+        <input type="number" name="quantity" placeholder="The amount" required ngModel>
+      </td>
+    </tr>
+
+  </table>
+
+  <button type="submit" [disabled]="itemForm.invalid">
+    Add
+  </button>
+
+</form>
+
+<div *ngIf="basket.length <= 0">
+  You have nothing in your basket
+</div>
+
+<app-basket *ngIf="basket.length > 0" [contents]="basket">
+</app-basket>
+
+<!--
+<app-cute-img
+  *ngFor="let i of images"
+  [image]="i">
+</app-cute-img>
+
+<app-cute-img
+  (imageClicked)="changeImage($event)"
+  [imageTitle]="title"
+  [image]="number">
+</app-cute-img>
+
+<app-cute-img
+  (imageClicked)="changeImage($event)">
+</app-cute-img>
+-->

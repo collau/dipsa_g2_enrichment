@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-12">
+    <form class="form-inline" #baseRateForm="ngForm"
+          (ngSubmit)="getExchangeRates()">
+
+      <div class="form-group">
+        <label for="base-rate" class="control-label">Base Rate</label>
+        <input type="text" id="base-rate" name="baseRate" class="form-control"
+            ngModel required>
+      </div>
+
+      <button type="submit" class="btn btn-success">GET!</button>
+
+    </form>
+  </div>
+</div>
