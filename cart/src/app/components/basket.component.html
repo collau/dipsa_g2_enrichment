@@ -1,0 +1,15 @@
+<div *ngIf="basket.length > 0">
+    <h2>Basket Contents</h2>
+
+    <ul>
+      <li *ngFor="let b of basket; let i = index">
+        <h4>{{ b }} ({{ i }})</h4>
+
+        <button type="button" (click)="removeFromCart(i)">
+          Delete
+        </button>
+
+      </li>
+
+    </ul>
+</div>

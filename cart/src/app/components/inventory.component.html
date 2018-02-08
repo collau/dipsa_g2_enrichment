@@ -1,0 +1,15 @@
+<form #invForm="ngForm" (ngSubmit)="addToCart()">
+
+    <h3>Items</h3>
+
+  <span *ngFor="let i of inventories">
+      <input type="radio" name="fruit"
+             ngModel [value]="i">
+      <code> {{ i }} </code>
+  </span>
+
+  <br>
+
+  <button type="submit">Add</button>
+
+</form>
