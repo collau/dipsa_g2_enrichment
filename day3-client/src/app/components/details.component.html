@@ -1,0 +1,32 @@
+<h3>Details</h3>
+
+<table>
+  <tr>
+    <td>Id:</td>
+    <td>{{ customer['customer_id']}}</td>
+  </tr>
+  <tr>
+    <td>Name:</td>
+    <td>{{ customer['name']}}</td>
+  </tr>
+  <tr>
+    <td>Address:</td>
+    <td>{{ customer['addressline1']}}</td>
+  </tr>
+  <tr>
+    <td>City:</td>
+    <td>{{ customer['city']}}</td>
+  </tr>
+  <tr>
+    <td>Phone:</td>
+    <td>{{ customer['phone']}}</td>
+  </tr>
+  <tr>
+    <td>Email:</td>
+    <td>{{ customer['email']}}</td>
+  </tr>
+</table>
+
+<button type="button" (click)="goBack()">
+  Back
+</button>

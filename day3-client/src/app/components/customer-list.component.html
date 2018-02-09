@@ -1,0 +1,15 @@
+
+<mat-list>
+  <mat-nav-list *ngFor="let c of customers">
+    <a mat-list-item [routerLink]="['/details', c.customer_id]">
+      {{ c.name }}
+    </a>
+  </mat-nav-list>
+</mat-list>
+<!--
+<div *ngFor="let c of customers">
+  <a [routerLink]="['/details', c.customer_id]">
+    <h4>{{ c.name }}</h4>
+  </a>
+</div>
+-->

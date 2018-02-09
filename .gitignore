@@ -1,2 +1,4 @@
 */node_modules/**
 */build/**
+/day3_server/nbproject/private/
+/day3_server/dist/
